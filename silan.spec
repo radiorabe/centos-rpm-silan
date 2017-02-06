@@ -58,7 +58,7 @@ autoreconf --force -v --install
 
 %build
 %configure
-%make_build
+make -j2
 
 %install
 %make_install
