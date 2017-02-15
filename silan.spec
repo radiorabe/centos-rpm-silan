@@ -24,12 +24,15 @@
 
 Name:     silan
 
+# v0.3.3
+%define _git_commit 40d05a9a969885b44f6f94739c376370
+
 Version:  0.3.3
 Release:  1%{?dist}
 Summary:  Audiofile Silence Analyzer
 License:  GPLv2+
 URL:      https://github.com/x42/silan
-Source0:  https://github.com/x42/silan/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:  https://github.com/x42/silan/archive/%{_git_commit}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires: automake
 BuildRequires: autoconf
@@ -50,7 +53,7 @@ Signal threshold and hold-off time can be freely configured. The output can be
 formatted with samples or seconds as unit or printed as audacity label file.
 
 %prep
-%setup -q -n %{name}-v%{version}
+%setup -q -n %{name}-%{_git_commit}
 autoreconf --force -v --install
 
 %build
