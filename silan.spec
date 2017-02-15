@@ -25,7 +25,7 @@
 Name:     silan
 
 # v0.3.3
-%define _git_commit 40d05a9a969885b44f6f94739c376370
+%define _git_commit 428be88ffd565f3d68470a10daca99e6534c69b4
 
 Version:  0.3.3
 Release:  1%{?dist}
